@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "563667006366",
+    "project_id": "homesaloon-8f2c8",
+    "storage_bucket": "homesaloon-8f2c8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563667006366:android:acd038df397e55fffa1c8f",
+        "android_client_info": {
+          "package_name": "com.example.home_saloon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "563667006366-6ka9sh6p28bubc3fbh35tib8isjpuhkt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAva6e4z6SRxScOvCHcJ8ZI-SKWzzAxu70"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "563667006366-6ka9sh6p28bubc3fbh35tib8isjpuhkt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "563667006366-nu98hch6rmco9a8gn491s304t801bgcn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.homeSaloon"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563667006366:android:3926102333ecf1defa1c8f",
+        "android_client_info": {
+          "package_name": "com.example.homesaloon_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "563667006366-6ka9sh6p28bubc3fbh35tib8isjpuhkt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAva6e4z6SRxScOvCHcJ8ZI-SKWzzAxu70"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "563667006366-6ka9sh6p28bubc3fbh35tib8isjpuhkt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "563667006366-nu98hch6rmco9a8gn491s304t801bgcn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.homeSaloon"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
