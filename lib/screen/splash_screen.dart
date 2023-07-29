@@ -3,7 +3,9 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:homesaloon_admin/controller/dash_controller.dart';
 import 'package:homesaloon_admin/utils/admin_login.dart';
+import 'package:homesaloon_admin/utils/share_preference.dart';
 import 'package:sizer/sizer.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 
@@ -15,6 +17,7 @@ class Splashscreen extends StatefulWidget {
 }
 
 class _SplashscreenState extends State<Splashscreen> {
+  Dashcontroller controller=Get.put(Dashcontroller());
   bool status = false;
 
   @override
@@ -22,11 +25,15 @@ class _SplashscreenState extends State<Splashscreen> {
     super.initState();
     status = Firebasehelper.helper.checkuser();
     print(status);
+
   }
 
   @override
   Widget build(BuildContext context) {
-    Timer(Duration(seconds: 4), () {
+    Timer(Duration(seconds: 4), () async {
+      Sharepre share=Sharepre();
+      controller.profile=await share.getdata();
+      print("profile staus:${controller.profile['status']}");
       status == false ? Get.offAllNamed('login') : Get.offAllNamed('dash');
     });
     return SafeArea(

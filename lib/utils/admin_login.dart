@@ -34,6 +34,7 @@ class Firebasehelper {
 
   Future<void> logout() async {
     await auth.signOut();
+    // await GoogleSignIn().signOut();
   }
 
   Map<String, String?> userdetail() {

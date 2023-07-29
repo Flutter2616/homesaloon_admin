@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:homesaloon_admin/controller/dash_controller.dart';
 import 'package:homesaloon_admin/utils/admin_login.dart';
+import 'package:homesaloon_admin/utils/share_preference.dart';
 import 'package:sizer/sizer.dart';
 
 class Loginscreen extends StatefulWidget {
@@ -11,6 +13,7 @@ class Loginscreen extends StatefulWidget {
 }
 
 class _LoginscreenState extends State<Loginscreen> {
+  Dashcontroller controller=Get.put(Dashcontroller());
   TextEditingController txtemail=TextEditingController();
   TextEditingController txtpassword=TextEditingController();
   @override
@@ -129,8 +132,8 @@ class _LoginscreenState extends State<Loginscreen> {
                           backgroundColor: msg=='success'?Colors.green.shade600:Colors.red.shade600,
                           snackPosition: SnackPosition.BOTTOM);
                       if(msg=="success")
-                      {
-                        Get.offAllNamed('dash');
+                      {Sharepre share=Sharepre();
+                        controller.profile['status']==null?Get.offAllNamed('profile'):Get.offAllNamed('dash');
                       }
                     },
                       child: Container(

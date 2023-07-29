@@ -41,6 +41,11 @@ dependencies:
   sizer: ^2.0.15
   get: ^4.6.5
   google_fonts: ^5.1.0
+  cloud_firestore: ^4.8.4
+  sqflite: ^2.3.0
+  custom_floating_action_button: ^0.0.3
+  d_chart: ^2.3.0
+  shared_preferences: ^2.2.0
 
 dev_dependencies:
   flutter_test:
