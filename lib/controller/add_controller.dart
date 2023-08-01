@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
 class Addcontroller extends GetxController {
-  RxString? service = "haircut".obs;
+  RxString? service = "Haircut".obs;
   RxString gender = "Man".obs;
 
   RxBool haircut = false.obs;

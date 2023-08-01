@@ -84,7 +84,7 @@ class _ServicescreenState extends State<Servicescreen> {
                                 radius: 15.sp),
                             const SizedBox(width: 15),
                             Container(
-                              width: 55.w,
+                              width: 50.w,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 // mainAxisAlignment: MainAxisAlignment.start,

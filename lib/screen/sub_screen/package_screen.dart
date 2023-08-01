@@ -25,12 +25,15 @@ class _PackagescreenState extends State<Packagescreen> {
   @override
   void initState() {
     super.initState();
-    txtprice=TextEditingController(text: service.servicelist[m1['index']].price);
-    txttime=TextEditingController(text: service.servicelist[m1['index']].time);
-    txtdesc=TextEditingController(text: service.servicelist[m1['index']].desc);
-    txtoffer=TextEditingController(text: service.servicelist[m1['index']].offer);
-    add.gender.value=service.servicelist[m1['index']].gender!;
-    add.package_Update("${service.servicelist[m1['index']].name}");
+    if(m1['status']==1)
+      {
+        txtprice=TextEditingController(text: service.servicelist[m1['index']].price);
+        txttime=TextEditingController(text: service.servicelist[m1['index']].time);
+        txtdesc=TextEditingController(text: service.servicelist[m1['index']].desc);
+        txtoffer=TextEditingController(text: service.servicelist[m1['index']].offer);
+        add.gender.value=service.servicelist[m1['index']].gender!;
+        add.package_Update("${service.servicelist[m1['index']].name}");
+      }
   }
   @override
   Widget build(BuildContext context) {

@@ -29,16 +29,23 @@ class _AddscreenState extends State<Addscreen> {
   @override
   void initState() {
     super.initState();
-    txtprice =
-        TextEditingController(text: service.servicelist[m1['index']].price);
-    txttime =
-        TextEditingController(text: service.servicelist[m1['index']].time);
-    txtoffer =
-        TextEditingController(text: service.servicelist[m1['index']].offer);
-    txtdesc =
-        TextEditingController(text: service.servicelist[m1['index']].desc);
-    add.service!.value = service.servicelist[m1['index']].name!;
-    add.gender.value = service.servicelist[m1['index']].gender!;
+    if(m1['status']==1)
+      {
+        txtprice =
+            TextEditingController(text: service.servicelist[m1['index']].price);
+        txttime =
+            TextEditingController(text: service.servicelist[m1['index']].time);
+        txtoffer =
+            TextEditingController(text: service.servicelist[m1['index']].offer);
+        txtdesc =
+            TextEditingController(text: service.servicelist[m1['index']].desc);
+        add.service!.value = service.servicelist[m1['index']].name!;
+        add.gender.value = service.servicelist[m1['index']].gender!;
+      }
+    else
+    {
+      add.all_Clear();
+    }
   }
 
   @override
@@ -127,27 +134,27 @@ class _AddscreenState extends State<Addscreen> {
                     items: [
                       DropdownMenuItem(
                         child: Text("Haircut"),
-                        value: "haircut",
+                        value: "Haircut",
                       ),
                       DropdownMenuItem(
                         child: Text("Face care"),
-                        value: "facecare",
+                        value: "Facecare",
                       ),
                       DropdownMenuItem(
                         child: Text("Hair color"),
-                        value: "haircolor",
+                        value: "Haircolor",
                       ),
                       DropdownMenuItem(
                         child: Text("Shave grooming"),
-                        value: "shaving",
+                        value: "Shaving",
                       ),
                       DropdownMenuItem(
                         child: Text("Massage"),
-                        value: "massage",
+                        value: "Massage",
                       ),
                       DropdownMenuItem(
                         child: Text("Haircare"),
-                        value: "haircare",
+                        value: "Haircare",
                       ),
                     ],
                     onChanged: (value) {
