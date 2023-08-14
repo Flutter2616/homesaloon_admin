@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:homesaloon_admin/modal/order_modal.dart';
 import 'package:homesaloon_admin/modal/service_modal.dart';
 
 class Firestorehelper {
@@ -43,5 +44,19 @@ class Firestorehelper {
   void delete(String id) {
     print("id:===$id");
     fire.collection("service").doc("$id").delete();
+  }
+  
+  Stream<QuerySnapshot<Map<String, dynamic>>> read_order()
+  {
+    return fire.collectionGroup("buycart").snapshots();
+  }
+
+  void
+
+
+
+  order_delete(String id)
+  {
+    fire.collectionGroup("buycart").parameters.remove("$id");
   }
 }

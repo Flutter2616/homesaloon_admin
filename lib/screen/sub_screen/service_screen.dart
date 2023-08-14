@@ -73,7 +73,7 @@ class _ServicescreenState extends State<Servicescreen> {
                             borderRadius: BorderRadius.circular(10.sp),
                             color: Colors.white),
                         margin: EdgeInsets.symmetric(vertical: 5),
-                        padding: EdgeInsets.all(10),
+                        padding: EdgeInsets.all(8),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -96,6 +96,12 @@ class _ServicescreenState extends State<Servicescreen> {
                                       style: TextStyle(
                                           fontWeight: FontWeight.w400,
                                           fontSize: 12.sp,
+                                          color: Colors.black)),
+                                  const SizedBox(height: 5),
+                                  Text("\$${controller.servicelist[index].price}",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 13.sp,
                                           color: Colors.black)),
                                   const SizedBox(height: 5),
                                   Text(
@@ -141,16 +147,9 @@ class _ServicescreenState extends State<Servicescreen> {
                               ),
                             ),
                             Spacer(),
-                            Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                Text("\$${controller.servicelist[index].price}",
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 12.sp,
-                                        color: Colors.black)),
-                                const SizedBox(height: 5),
-                                PopupMenuButton(
+                            Builder(
+                              builder: (context) {
+                                return PopupMenuButton(
                                   onSelected: (value) {
                                     if (value == 'update') {
                                       Get.toNamed(
@@ -181,8 +180,8 @@ class _ServicescreenState extends State<Servicescreen> {
                                       )
                                     ];
                                   },
-                                ),
-                              ],
+                                );
+                              }
                             )
                           ],
                         ),
